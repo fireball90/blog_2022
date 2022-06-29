@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="register.html">Regisztráció</a>
+        <a href="login.html">Belépés</a>
+        <a href="index.html">Kezdőlap</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <header id="header">
+        <h1>BLOG OF THE CENTURY</h1>
+    </header>
+
+    <h1 id="loginH1">Register to the blog</h1>
+    <h2 id="loginH2">Please enter your information</h2>
+    <!-- <div class="container">
+        <div class="form">
+          <form class="register-form" id="register">
+            <p>Kérem adja meg a felhasználónevét</p>
+            <input type="username" placeholder="username" name="username"/ >
+            <p>Kérem adja meg a jelszavát</p>
+            <input type="password" placeholder="password" name="pass"/>
+            <p>Kérem adjon meg egy becenevet</p>
+            <input type="nickname" placeholder="nickname" name="nickname"/>
+            <button>Register</button>
+          </form>
+        </div>
+      </div> -->
+    
+      <div class="container">
+        <form id="signup" class="form">
+            <h1>Sign Up</h1>
+            <div class="form-field">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" autocomplete="off">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="email">Nickname</label>
+                <input type="text" name="email" id="email" autocomplete="off">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" autocomplete="off">
+                <small></small>
+            </div>
+
+
+            <div class="form-field">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" name="confirm-password" id="confirm-password" autocomplete="off">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <button type="submit" value="Sign Up" class="btn">Sign up</button>
+            </div>
+        </form>
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>
