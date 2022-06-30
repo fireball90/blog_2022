@@ -148,4 +148,58 @@ function appendData(data) {
   document.getElementById('list-container2').innerHTML = postHTML;
 }
 
+//logout
+document.getElementById('gombKi').onclick = function logout(event){
+    event.preventDefault();
+    alert("Sikeres kilépés!");
+    location.href = "index.html";
+}
+const isLoggedIn = false;
+//login check
+function loginCheck(event){
+    event.preventDefault();
+    if (isLoggedIn){
+        var elementKi = document.getElementById("gombKi");
+            elementKi.classList.add("hidden");
+    }else{
+        var elementKi = document.getElementById("gombKi");
+            elementKi.classList.remove("hidden");
+    }
+}
+
+//belépés
+document.getElementById('login').onsubmit = function login(event){
+    event.preventDefault();
+
+    var name = event.target.elements.name.value;
+    var pass = event.target.elements.pass.value;
+
+    console.log(name)
+    console.log(pass)
+
+    isLoggedIn = true;
+}
+ 
+
+//regisztráció
+document.getElementById('signup').onsubmit = function signUp(event){
+    event.preventDefault();
+
+    var username = event.target.elements.username.value;
+    var password = event.target.elements.password.value;
+    var nickname = event.target.elements.email.value;
+
+    console.log(username)
+}
+
+
+//new blog
+
+
+
+//edit blog
+
+
+
+
 

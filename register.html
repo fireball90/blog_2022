@@ -11,9 +11,12 @@
 </head>
 <body>
     <div class="topnav" id="myTopnav">
-        <a href="register.html">Regisztráció</a>
-        <a href="login.html">Belépés</a>
-        <a href="index.html">Kezdőlap</a>
+        <a href="register.html"><span id="gombReg">Regisztráció</span></a>
+        <a href="index.html"><span id="gombKi">Kilépés</span></a>
+        <a href="login.html"><span id="gombBe">Belépés</span></a>
+        <a href="new.html"><span id="gombNew">Új blog hozzáadása</span></a>
+        <a href="edit.html"><span id="gombEdit">Blog szerkesztése</span></a>
+        <a href="index.html"><span id="gombIndex">Kezdőlap</span></a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -60,12 +63,12 @@
                 <small></small>
             </div>
 
-
+<!-- 
             <div class="form-field">
                 <label for="confirm-password">Confirm Password:</label>
                 <input type="password" name="confirm-password" id="confirm-password" autocomplete="off">
                 <small></small>
-            </div>
+            </div> -->
 
             <div class="form-field">
                 <button type="submit" value="Sign Up" class="btn">Sign up</button>
@@ -76,6 +79,6 @@
 
 
     <script src="js/script.js"></script>
-    <script src="js/validation.js"></script>
+    <!-- <script src="js/validation.js"></script> -->
 </body>
 </html>

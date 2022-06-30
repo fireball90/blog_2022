@@ -287,3 +287,105 @@ header h1{
 
 }
 
+.hidden {
+  display: none;
+}
+
+.new-container {
+  margin: 50px 200px 50px 200px;
+  background: #f1f1f1;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(255, 255, 255) 0%, rgb(87, 87, 87) 100%);
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+  color: #2b2b2b;
+  text-align: center;
+  width: auto;
+  padding: 10px;
+}
+#newcucc{
+  color: #1b1b1b;
+}
+
+.edit-container {
+  margin: 50px 200px 50px 200px;
+  background: #f1f1f1;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(255, 255, 255) 0%, rgb(87, 87, 87) 100%);
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+  color: #2b2b2b;
+  text-align: center;
+  width: auto;
+  padding: 10px;
+}
+.btn2 {
+  width: 20%;
+  margin-top: 20px;
+  padding: 15px;
+  background: #5c5c5c;
+  border-bottom: 3px solid #00c3ff;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.btn2:hover {
+  background: #3b405c;
+  cursor: pointer;
+}
+
+.btn2:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .new-container {
+    margin: 30px 100px 30px 100px;
+    background: #f1f1f1;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(255, 255, 255) 0%, rgb(87, 87, 87) 100%);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+    color: #2b2b2b;
+    text-align: center;
+    width: auto;
+    padding: 20px;
+  }
+  .edit-container {
+    margin: 30px 100px 30px 100px;
+    background: #f1f1f1;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(255, 255, 255) 0%, rgb(87, 87, 87) 100%);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+    color: #2b2b2b;
+    text-align: center;
+    width: auto;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .new-container {
+    margin: 20px;
+    background: #f1f1f1;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(255, 255, 255) 0%, rgb(87, 87, 87) 100%);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+    color: #2b2b2b;
+    text-align: center;
+    width: auto;
+    padding: 20px;
+  }
+  .edit-container {
+    margin: 30px 100px 30px 100px;
+    background: #f1f1f1;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(255, 255, 255) 0%, rgb(87, 87, 87) 100%);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+    color: #2b2b2b;
+    text-align: center;
+    width: auto;
+    padding: 20px;
+  }
+
+}

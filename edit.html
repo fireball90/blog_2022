@@ -14,7 +14,7 @@
 <body>
     <div class="topnav" id="myTopnav">
         <a href="register.html"><span id="gombReg">Regisztráció</span></a>
-        <a href="index.html"><span id="gombKi" >Kilépés</span></a>
+        <a href="index.html"><span id="gombKi">Kilépés</span></a>
         <a href="login.html"><span id="gombBe">Belépés</span></a>
         <a href="new.html"><span id="gombNew">Új blog hozzáadása</span></a>
         <a href="edit.html"><span id="gombEdit">Blog szerkesztése</span></a>
@@ -28,11 +28,26 @@
         <h1>BLOG OF THE CENTURY</h1>
     </header>
 
-
-   <!--  <div class="list-container"> </div> -->
-    <div id="list-container2">
+    <div class="edit-container">
+        <form id="edit" class="form">
+            <h1>Bejegyzés módosítása</h1>
+            <div class="form-field">
+              <label for="edittitle" id="newcucc">Title:</label>
+              <input type="text" name="edittitle" id="edittitle" autocomplete="off">
+              <small></small>
+            </div>
+      
+            <div class="form-field">
+              <label for="newentry" id="newcucc">Entry:</label>
+              <input type="text" name="editentry" id="editentry" autocomplete="off">
+              <small></small>
+            </div>
+      
+            <div class="form-field">
+              <button type="submit" value="Edit blog" class="btn2">Módosítás</button>
+            </div>
+          </form>
     </div>
-
 
     <script src="js/script.js"></script>
 
