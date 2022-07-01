@@ -11,7 +11,7 @@
 
 
 </head>
-<body>
+<body onload="renderProducts()">
     <div class="topnav" id="myTopnav">
         <a href="register.html"><span id="gombReg">Regisztráció</span></a>
         <a href="index.html"><span id="gombKi">Kilépés</span></a>
@@ -27,8 +27,11 @@
     <header id="header">
         <h1>BLOG OF THE CENTURY</h1>
     </header>
-
-    <div class="edit-container">
+    <div id="list-container">
+    </div>
+    <div id="edit-blog">
+    </div>
+<!--     <div class="edit-container">
         <form id="edit" class="form">
             <h1>Bejegyzés módosítása</h1>
             <div class="form-field">
@@ -47,9 +50,9 @@
               <button type="submit" value="Edit blog" class="btn2">Módosítás</button>
             </div>
           </form>
-    </div>
+    </div> -->
 
     <script src="js/script.js"></script>
-
+    <script src="js/editblog.js"></script>
 </body>
 </html>

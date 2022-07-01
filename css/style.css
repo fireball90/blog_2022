@@ -39,7 +39,8 @@ header h1{
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(95, 95, 95) 0%, rgba(0,0,0,1) 100%);
     width: 100%;
 }
-  
+ 
+
 .topnav a {
     float: right; 
     display: block;
@@ -55,14 +56,13 @@ header h1{
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(255, 255, 255) 0%, rgb(87, 87, 87) 100%);
     color: rgb(0, 0, 0);
 }
-  
-  
+
 .topnav .icon {
     display: none;
 }
   
 @media screen and (max-width: 700px) {
-    .topnav a:not(:first-child) {display: none;}
+    .topnav a:not(:last-child) {display: none;}
     .topnav a.icon {
         float: left;
         display: block;
@@ -76,6 +76,7 @@ header h1{
         margin: 0;
         padding: 50px;
     }
+
 
 }
   
@@ -91,6 +92,7 @@ header h1{
         display: block;
         text-align: left;
     }
+
 }
 
 
@@ -226,6 +228,18 @@ header h1{
   width: auto;
   padding: 10px;
 }
+.card-container2 {
+  display:inline-block;
+  margin: 50px 25px;
+  background: #f1f1f1;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(255, 255, 255) 0%, rgb(87, 87, 87) 100%);
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+  color: #2b2b2b;
+  text-align: center;
+  width: 200px;
+  padding: 10px;
+}
 
 .round {
   border: 1px solid #03bfcb;
@@ -255,6 +269,26 @@ header h1{
 }
 .entry {
   text-align: justify;
+  margin: 20px 50px;
+}
+.title2 {
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  text-shadow: 2px 2px black;
+  margin: auto;
+  text-align: center;
+}
+.author2 {
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  text-shadow: 2px 2px white;
+  margin: auto;
+  text-align: center;
+}
+.entry2 {
+  text-align: center;
   margin: 20px 50px;
 }
 
@@ -336,6 +370,27 @@ header h1{
 }
 
 .btn2:focus {
+  outline: none;
+}
+.btn3 {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  background: #5c5c5c;
+  border-bottom: 3px solid #00c3ff;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.btn3:hover {
+  background: #3b405c;
+  cursor: pointer;
+}
+
+.btn3:focus {
   outline: none;
 }
 
