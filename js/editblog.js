@@ -105,12 +105,23 @@ function renderEditBlog(blogId){
         
            document.getElementById("edit").onsubmit=function(event){
                 event.preventDefault();
-        
-                blogList[blogIndex]=
-                    {
-                        title:event.target.elements.edittitle.value,
-                        entry: event.target.elements.editentry.value,
-                    }
+
+                var data = { 
+                    title: event.target.elements.edittitle.value,
+                    entry: event.target.elements.editentry.value 
+                };
+                
+                fetch('https://localhost:7053/api/Blog/Create', {
+                    method: 'POST', // or 'PUT',
+                    body: JSON.stringify(data),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                    console.log('Success:', data);
+                    })
+                    .catch((error) => {
+                    console.error('Error:', error);
+                    });  
                 
             }   
             
