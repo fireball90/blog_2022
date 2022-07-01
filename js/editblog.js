@@ -2,6 +2,7 @@
 //window.onload=renderProducts();
 //READ
     var postHTML = '';
+    var blogList = [];
     fetch('https://localhost:7053/api/Blog/Read?page=1')
     .then(function (response) {
         return response2.json();
@@ -16,6 +17,11 @@
     function appendData(data) {
 
     for (var i = 0; i < data.length; i++) {
+        blogList.push({
+            id: data[i].id,
+            title: data[i].title,
+            entry: data[i].entry
+        });
         postHTML+=`
         <div class="card-container2">
         <div class="name-container"> 
@@ -41,7 +47,7 @@ function editPlease(){
     for (const item of document.querySelectorAll(".edit-blog")) {
     item.onclick=function(event){
         var id=event.target.dataset.blogid;
-        console.log(id)
+        console.log(blogList[1])
         renderEditBlog(id);
         }
     }
@@ -62,25 +68,13 @@ function editPlease(){
 
     } */
 
-/* 
+
 
 function renderEditBlog(blogId){
-    fetch('https://localhost:7053/api/Blog/Read?page=1')
-    .then(function (response) {
-        return response3.json();
-    })
-    .then(function (data) {
-        appendData(data);
-        console.log(response3.json());
-    })
-    .catch(function (err) {
-        console.log('error: ' + err);
-    });
-    function appendData(data) {
-       
+
             var blogIndex=0;
-            for (let i = 0; i < data.length;i++){
-                if (data[i].id==blogId){
+            for (let i = 0; i < blogList.length;i++){
+                if (blogList[i].id==blogId){
                     blogIndex=i;
                 }
             }
@@ -91,13 +85,13 @@ function renderEditBlog(blogId){
                     <h1>Bejegyzés módosítása</h1>
                     <div class="form-field">
                     <label for="edittitle" id="newcucc">Title:</label>
-                    <input type="text" name="edittitle" id="edittitle" value="${data[blogIndex].title}"autocomplete="off">
+                    <input type="text" name="edittitle" id="edittitle" value="${blogList[blogIndex].title}"autocomplete="off">
                     <small></small>
                     </div>
             
                     <div class="form-field">
                     <label for="newentry" id="newcucc">Entry:</label>
-                    <input type="text" name="editentry" id="editentry" value="${data[blogIndex].entry}" autocomplete="off">
+                    <input type="text" name="editentry" id="editentry" value="${blogList[blogIndex].entry}" autocomplete="off">
                     <small></small>
                     </div>
             
@@ -114,18 +108,16 @@ function renderEditBlog(blogId){
         
                 blogList[blogIndex]=
                     {
-                        title:event.target.elements.name.value,
-                        entry: event.target.elements.price.value,
+                        title:event.target.elements.edittitle.value,
+                        entry: event.target.elements.editentry.value,
                     }
                 
-            }  
+            }   
+            
 
-        }
+}
     
 
-    // value="${data[blogIndex].title}"value="${data[blogIndex].entry}"
-    
-} */
 
 
 
