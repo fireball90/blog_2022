@@ -1,3 +1,4 @@
+
 var isLoggedIn=false;
 
 
@@ -7,8 +8,8 @@ document.getElementById('login').onsubmit = function login(event){
     var name = event.target.elements.name.value;
     var pass = event.target.elements.pass.value;
 
-    console.log(name)
-    console.log(pass)
+/*     console.log(name)
+    console.log(pass) */
 
     if (name == "admin" && pass== "admin"){
         isLoggedIn=true;
@@ -24,9 +25,21 @@ document.getElementById('login').onsubmit = function login(event){
     }
 }
 
-/* document.getElementById('gombKi').onclick = function logout(event){
+
+//logout
+document.getElementById('gombKi').onclick = function logout(event){
     event.preventDefault();
     alert("Sikeres kilépés!");
     location.href = "index.html";
     isLoggedIn=false;
-} */
+} 
+
+
+//validáció
+function checkPassword(){
+
+}
+
+function checkUsername(){
+
+}

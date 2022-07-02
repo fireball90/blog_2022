@@ -9,11 +9,16 @@ document.getElementById('new').onsubmit = function login(event){
 
     const data = { 
         title: titleNew,
-        entry: entryNew 
+        entry: entryNew,
+        authorId: 1
     };
  
     fetch('https://localhost:7053/api/Blog/Create', {
-    method: 'POST', // or 'PUT',
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
     body: JSON.stringify(data),
     })
     .then(response => response.json())
@@ -23,8 +28,7 @@ document.getElementById('new').onsubmit = function login(event){
     .catch((error) => {
     console.error('Error:', error);
     });  
-
-
+ 
 }
 
 

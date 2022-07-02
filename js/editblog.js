@@ -33,7 +33,7 @@
         <p class="author2">${data[i].authorNickname}</p> 
         <button class="btn3 edit-blog" data-blogid=${data[i].id} onclick="editPlease()">Szerkeszt</button>
         <br>
-        <button class="btn3 delete-blog" data-blogid=${data[i].id}>Töröl</button>
+        <button class="btn3 delete-blog" data-blogid=${data[i].id} onclick="deletePlease()">Töröl</button>
         </div>
 
         `
@@ -52,21 +52,6 @@ function editPlease(){
         }
     }
 }   
-    //törlés
-    /* for (const item of document.querySelectorAll(".delete-blog")) {
-        item.onclick=function(event){
-
-            var id=event.target.dataset.productid;
-
-            for (let i = 0; i < state.products.length; i++) {
-                if(state.products[i].id==id){
-                    data[i].isArchived == true;
-                }
-            }
-            renderProducts();
-        }  
-
-    } */
 
 
 
@@ -106,40 +91,60 @@ function renderEditBlog(blogId){
            document.getElementById("edit").onsubmit=function(event){
                 event.preventDefault();
 
-                var data = { 
+                var data = {
+                    id: blogId,
                     title: event.target.elements.edittitle.value,
-                    entry: event.target.elements.editentry.value 
+                    entry: event.target.elements.editentry.value
                 };
                 
-                fetch('https://localhost:7053/api/Blog/Create', {
-                    method: 'POST', // or 'PUT',
+                fetch('https://localhost:7053/api/Blog/Update', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
                     body: JSON.stringify(data),
                     })
                     .then(response => response.json())
                     .then(data => {
                     console.log('Success:', data);
+                    location.reload();
                     })
                     .catch((error) => {
                     console.error('Error:', error);
-                    });  
+                    }); 
                 
             }   
             
 
 }
     
+//törlés
+function deletePlease(){
+    for (const item of document.querySelectorAll(".delete-blog")) {
+        item.onclick=function(event){
+
+            var id=event.target.dataset.blogid;
 
 
+            fetch('https://localhost:7053/api/Blog/Delete', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(id),
+                })
+                .then(response => response.json())
+                .then(data => {
+                console.log('Success:', data);
+                location.reload();
+                })
+                .catch((error) => {
+                console.error('Error:', error);
+                }); 
+        }  
 
+    } 
 
-/* //bekérés adatoknak
-document.getElementById('edit').onsubmit = function login(event){
-    event.preventDefault();
-
-    var title = event.target.elements.edittitle.value;
-    var entry = event.target.elements.editentry.value;
-
-    console.log(title)
-    console.log(entry)
 }
- */

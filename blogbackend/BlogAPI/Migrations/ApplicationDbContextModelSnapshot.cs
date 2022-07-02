@@ -22,6 +22,21 @@ namespace BlogAPI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("AccountRole", b =>
+                {
+                    b.Property<int>("AccountsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RolesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AccountsId", "RolesId");
+
+                    b.HasIndex("RolesId");
+
+                    b.ToTable("AccountRole");
+                });
+
             modelBuilder.Entity("BlogAPI.Models.Blog", b =>
                 {
                     b.Property<int>("Id")
@@ -34,8 +49,8 @@ namespace BlogAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Entry")
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
+                        .HasMaxLength(10000)
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsArchived")
                         .HasColumnType("bit");
@@ -44,8 +59,8 @@ namespace BlogAPI.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
@@ -54,23 +69,7 @@ namespace BlogAPI.Migrations
                     b.ToTable("Blogs");
                 });
 
-            modelBuilder.Entity("BlogAPI.Models.Role", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Roles");
-                });
-
-            modelBuilder.Entity("BlogAPI.Models.User", b =>
+            modelBuilder.Entity("BlogAPI.Models.UserManagement.Account", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -95,49 +94,50 @@ namespace BlogAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Accounts");
                 });
 
-            modelBuilder.Entity("RoleUser", b =>
+            modelBuilder.Entity("BlogAPI.Models.UserManagement.Role", b =>
                 {
-                    b.Property<int>("RolesId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("UsersId")
-                        .HasColumnType("int");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.HasKey("RolesId", "UsersId");
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("UsersId");
+                    b.HasKey("Id");
 
-                    b.ToTable("RoleUser");
+                    b.ToTable("Roles");
+                });
+
+            modelBuilder.Entity("AccountRole", b =>
+                {
+                    b.HasOne("BlogAPI.Models.UserManagement.Account", null)
+                        .WithMany()
+                        .HasForeignKey("AccountsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BlogAPI.Models.UserManagement.Role", null)
+                        .WithMany()
+                        .HasForeignKey("RolesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("BlogAPI.Models.Blog", b =>
                 {
-                    b.HasOne("BlogAPI.Models.User", "Author")
+                    b.HasOne("BlogAPI.Models.UserManagement.Account", "Author")
                         .WithMany("Blogs")
                         .HasForeignKey("AuthorId");
 
                     b.Navigation("Author");
                 });
 
-            modelBuilder.Entity("RoleUser", b =>
-                {
-                    b.HasOne("BlogAPI.Models.Role", null)
-                        .WithMany()
-                        .HasForeignKey("RolesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BlogAPI.Models.User", null)
-                        .WithMany()
-                        .HasForeignKey("UsersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("BlogAPI.Models.User", b =>
+            modelBuilder.Entity("BlogAPI.Models.UserManagement.Account", b =>
                 {
                     b.Navigation("Blogs");
                 });
