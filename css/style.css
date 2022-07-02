@@ -39,14 +39,16 @@ header h1{
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(95, 95, 95) 0%, rgba(0,0,0,1) 100%);
     width: 100%;
 }
- 
+
+.menutext{
+    padding: 14px 16px;
+}
 
 .topnav a {
     float: right; 
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
 }
@@ -66,6 +68,7 @@ header h1{
     .topnav a.icon {
         float: left;
         display: block;
+        padding: 14px 16px;
     }
     header h1{
         font-size: 60px;
