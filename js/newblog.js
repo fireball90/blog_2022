@@ -16,6 +16,7 @@ document.getElementById('new').onsubmit = function login(event){
     fetch('https://localhost:7053/api/Blog/Create', {
     method: 'POST',
     headers: {
+        'Authorization':`Bearer ${Cookies.get("JWT")}`,
         'Accept': 'application/json',
         'Content-Type': 'application/json'
     },
@@ -27,6 +28,7 @@ document.getElementById('new').onsubmit = function login(event){
     })
     .catch((error) => {
     console.error('Error:', error);
+    alert("Nincs jogosultságod!")
     });  
  
 }

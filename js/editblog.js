@@ -100,6 +100,7 @@ function renderEditBlog(blogId){
                 fetch('https://localhost:7053/api/Blog/Update', {
                     method: 'POST',
                     headers: {
+                        'Authorization':`Bearer ${Cookies.get("JWT")}`,
                         'Accept': 'application/json',
                         'Content-Type': 'application/json'
                     },
@@ -112,6 +113,7 @@ function renderEditBlog(blogId){
                     })
                     .catch((error) => {
                     console.error('Error:', error);
+                    alert("Nincs jogosultságod!")
                     }); 
                 
             }   
@@ -130,6 +132,7 @@ function deletePlease(){
             fetch('https://localhost:7053/api/Blog/Delete', {
                 method: 'POST',
                 headers: {
+                    'Authorization':`Bearer ${Cookies.get("JWT")}`,
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
@@ -142,6 +145,7 @@ function deletePlease(){
                 })
                 .catch((error) => {
                 console.error('Error:', error);
+                alert("Nincs jogosultságod!")
                 }); 
         }  
 

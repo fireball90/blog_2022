@@ -112,6 +112,12 @@ fetch('https://localhost:7053/api/Blog/Read?page=1')
   .then(data => console.log(data))
   */
 
+  var newblog = document.getElementById('gombNew');
+  newblog.classList.add("hidden");
+  var editblog = document.getElementById('gombEdit');
+  editblog.classList.add("hidden");
+  var kilepes = document.getElementById('gombKi');
+  kilepes.classList.add("hidden");
 
 
 
@@ -126,6 +132,13 @@ fetch('https://localhost:7053/api/Blog/Read?page=1')
         belepes.classList.add("hidden");
         var register = document.getElementById('gombReg');
         register.classList.add("hidden");
+
+        var kilepes = document.getElementById('gombKi');
+        kilepes.classList.remove("hidden");
+        var newblog = document.getElementById('gombNew');
+        newblog.classList.remove("hidden");
+        var editblog = document.getElementById('gombEdit');
+        editblog.classList.remove("hidden");
     }
 
     if (loginObject.role=="User"){
@@ -137,6 +150,9 @@ fetch('https://localhost:7053/api/Blog/Read?page=1')
         newblog.classList.add("hidden");
         var editblog = document.getElementById('gombEdit');
         editblog.classList.add("hidden");
+
+        var kilepes = document.getElementById('gombKi');
+        kilepes.classList.remove("hidden");
     }
 
 

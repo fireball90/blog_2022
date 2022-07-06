@@ -52,7 +52,7 @@ namespace BlogAPI.Controllers
             return Ok("Blog created");
         }
 
-        [HttpGet, Authorize(Roles = "User, Admin")]
+        [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> Read(int page)
         {
