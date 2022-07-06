@@ -38,6 +38,13 @@ document.getElementById('login').onsubmit = function login(event){
         belepes.classList.add("hidden");
         var register = document.getElementById('gombReg');
         register.classList.add("hidden");
+
+        var kilepes = document.getElementById('gombKi');
+        kilepes.classList.remove("hidden");
+        var newblog = document.getElementById('gombNew');
+        newblog.classList.remove("hidden");
+        var editblog = document.getElementById('gombEdit');
+        editblog.classList.remove("hidden");
     }
 
     if (loginObject.role=="User"){
@@ -49,6 +56,9 @@ document.getElementById('login').onsubmit = function login(event){
         newblog.classList.add("hidden");
         var editblog = document.getElementById('gombEdit');
         editblog.classList.add("hidden");
+
+        var kilepes = document.getElementById('gombKi');
+        kilepes.classList.remove("hidden");
     }
 }
 
