@@ -27,21 +27,20 @@ document.getElementById('login').onsubmit = function login(event){
     console.error('Error:', error);
     });  
 
-    var coded = Cookies.get("JWT");
-    var decoded =  atob(coded);
+    var coded = Cookies.get("JWT");  
+    var loginObject = renderLoginedUser(coded); 
     
-    
-    
+    //console.log(loginObject)
 
 
-    if (Role == "Admin"){
+    if (loginObject.role == "Admin"){
         var belepes = document.getElementById('gombBe');
         belepes.classList.add("hidden");
         var register = document.getElementById('gombReg');
         register.classList.add("hidden");
     }
 
-    if (Role=="User"){
+    if (loginObject.role=="User"){
         var belepes = document.getElementById('gombBe');
         belepes.classList.add("hidden");
         var register = document.getElementById('gombReg');
@@ -59,6 +58,15 @@ document.getElementById('gombKi').onclick = function logout(event){
     event.preventDefault();
     alert("Sikeres kilépés!");
     location.href = "index.html";
-    isLoggedIn=false;
+    Cookies.set("JWT", "");
 } 
 
+
+function renderLoginedUser(token) {       
+
+    let codedUserData = token.split('.')[1]     
+    let uncodedData = atob(codedUserData)    
+    let object = JSON.parse(uncodedData)     
+
+    return object 
+}

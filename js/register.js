@@ -8,3 +8,6 @@ document.getElementById('signup').onsubmit = function signUp(event){
 
     console.log(username)
 }
+
+
+

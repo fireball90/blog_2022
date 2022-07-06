@@ -86,9 +86,9 @@ namespace BlogAPI.Controllers
             // Az adatok a felhasználóról, amik szerepelnek majd a visszaküldött tokenben
             List<Claim> claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, loggedAccount.Id.ToString()),
-                new Claim(ClaimTypes.Name, loggedAccount.Username),
-                new Claim(ClaimTypes.Role, loggedAccount.Role.Name)
+                new Claim("id", loggedAccount.Id.ToString()),
+                new Claim("username", loggedAccount.Username),
+                new Claim("role", loggedAccount.Role.Name)
             };
 
             // Kulcs, amiből később generáljuk az aláírást
