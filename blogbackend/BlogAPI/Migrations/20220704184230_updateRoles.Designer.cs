@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220702165049_init2")]
-    partial class init2
+    [Migration("20220704184230_updateRoles")]
+    partial class updateRoles
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -106,6 +106,18 @@ namespace BlogAPI.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<bool>("CanCreateBlog")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("CanDeleteBlog")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("CanReadBlog")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("CanUpdateBlog")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");

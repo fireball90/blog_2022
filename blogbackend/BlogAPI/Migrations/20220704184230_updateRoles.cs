@@ -4,10 +4,38 @@
 
 namespace BlogAPI.Migrations
 {
-    public partial class init2 : Migration
+    public partial class updateRoles : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AddColumn<bool>(
+                name: "CanCreateBlog",
+                table: "Roles",
+                type: "bit",
+                nullable: false,
+                defaultValue: false);
+
+            migrationBuilder.AddColumn<bool>(
+                name: "CanDeleteBlog",
+                table: "Roles",
+                type: "bit",
+                nullable: false,
+                defaultValue: false);
+
+            migrationBuilder.AddColumn<bool>(
+                name: "CanReadBlog",
+                table: "Roles",
+                type: "bit",
+                nullable: false,
+                defaultValue: false);
+
+            migrationBuilder.AddColumn<bool>(
+                name: "CanUpdateBlog",
+                table: "Roles",
+                type: "bit",
+                nullable: false,
+                defaultValue: false);
+
             migrationBuilder.AlterColumn<string>(
                 name: "Title",
                 table: "Blogs",
@@ -33,6 +61,22 @@ namespace BlogAPI.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropColumn(
+                name: "CanCreateBlog",
+                table: "Roles");
+
+            migrationBuilder.DropColumn(
+                name: "CanDeleteBlog",
+                table: "Roles");
+
+            migrationBuilder.DropColumn(
+                name: "CanReadBlog",
+                table: "Roles");
+
+            migrationBuilder.DropColumn(
+                name: "CanUpdateBlog",
+                table: "Roles");
+
             migrationBuilder.AlterColumn<string>(
                 name: "Title",
                 table: "Blogs",

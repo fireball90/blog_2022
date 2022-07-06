@@ -132,6 +132,11 @@ C:\Users\Lekner Norbert\Documents\Sources\Blog-main\BlogAPI\obj\Debug\net6.0\ref
 C:\Users\Lekner Norbert\Documents\Sources\Blog-main\BlogAPI\obj\Debug\net6.0\BlogAPI.pdb
 C:\Users\Lekner Norbert\Documents\Sources\Blog-main\BlogAPI\obj\Debug\net6.0\BlogAPI.genruntimeconfig.cache
 C:\Users\Lekner Norbert\Documents\Sources\Blog-main\BlogAPI\obj\Debug\net6.0\ref\BlogAPI.dll
+C:\Users\Lekner Norbert\Documents\Sources\BlogAPI\BlogAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Lekner Norbert\Documents\Sources\BlogAPI\BlogAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Lekner Norbert\Documents\Sources\BlogAPI\BlogAPI\bin\Debug\net6.0\Scrutor.dll
+C:\Users\Lekner Norbert\Documents\Sources\BlogAPI\BlogAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\Lekner Norbert\Documents\Sources\BlogAPI\BlogAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\appsettings.Development.json
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\appsettings.json
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\BlogAPI.exe
@@ -142,6 +147,7 @@ E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\BlogAPI.pdb
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Humanizer.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\System.Net.Http.Formatting.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\System.Web.Http.dll
+E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
@@ -151,6 +157,7 @@ E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Microsoft.EntityFrame
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
@@ -161,6 +168,9 @@ E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Microsoft.OpenApi.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Scrutor.dll
+E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\suli\CSAPATOS\blog\blogbackend\BlogAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
